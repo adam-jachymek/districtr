@@ -1,70 +1,59 @@
-# Getting Started with Create React App
+The app is called "Districtr" 🗺️
+It allows users to add districts with descriptions what's interesting in them. The created districts can be later listed and displayed one-by-one.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Unfortunately the client set a Deadline for 2hours, so you have to do your best to implement at least Basic features
 
-## Available Scripts
+🎯 Basic features 🎯
+Create a page with Region form
+On /regions/new path create page with form with:
 
-In the project directory, you can run:
+input for name
+textarea for description
+react-leaflet map for defining region points
+Users should be able to define the borders by clicking on the map. Submitting the form should navigate to the /regions path.
 
-### `npm start`
+Create a page with list of Region names
+On /regions path create page displaying list of all created regions.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+📚 Libraries to use
+react-leaflet
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+@reach/router or any routing package you are familiar with
 
-### `npm test`
+for UI and styling use a tool that you are comfortable with
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+🏅 Additional features 🏅
+Create a Region view page
+On /regions/:regionId path create page for displaying specific region. This page should display all region information with the area marked on the map.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+After clicking a Region name in Regions list, navigate user to Region view.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Region form improvements
+Add validation and error messages to fields.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+name required, have at least 3 characters and at most 30
+description required, have at least 10 characters, and at most 500
+borders required, have at least 3 points (to make a triangle)
+Add reset button to reset the borders.
 
-### `npm run eject`
+Add undo button to revert last border point. It should work multiple times in a row to remove more than one border point.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Edit a Region form
+Display edit button in Region view. Edit Region form should be properly initialized with Region data.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+📚 Libraries to use
+yup for validation
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+✨🏆✨ Super features ✨🏆✨
+If implemented successfully before Deadline they show you are really experienced and effective developer.
 
-## Learn More
+Tests
+Add tests for Regions display and forms.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Typescript
+Make the app in Typescript without using any keyword.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+📚 Libraries to use
+@testing-library/react
